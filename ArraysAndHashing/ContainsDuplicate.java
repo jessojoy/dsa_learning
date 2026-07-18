@@ -4,6 +4,9 @@ import java.util.*;
 class ContainsDuplicate{
     static boolean hasDuplicate(int[] nums){
         List<Integer> numbers = new ArrayList<>();
+        // We use an array list to store elements and check if the element is already inside the 
+        // arraylist while inserting the elements.
+        // ArrayList allows for dynamic size.
         for(int i: nums){
             if(numbers.contains(i)){
                 return true;

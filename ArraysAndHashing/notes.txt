@@ -1,0 +1,27 @@
+Collections API (concept)
+    whenever you want to group elements.
+    Whenever you need an array that is dynamic you use arraylist
+    it belongs to the java.util package.
+
+    Collection nums = new Collection();
+
+                    Collections 
+                        |
+            -------------------------
+            |           |           |
+            List        Queue       set
+            |           |           |
+            ArrayList   Dequeue     HashSet
+            LinkedList              linkedHashSet
+
+            methods
+                add()
+                addall()
+                contains()
+                foreach()
+                notify()
+                remove()
+    
+Collection (interface) 
+
+Collections (class)
