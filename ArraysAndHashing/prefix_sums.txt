@@ -1,0 +1,81 @@
+prefix sums
+    it is the cumulative sum of elements from the start of the array to a given index. 
+
+implementation
+    suppose we have an array int[] arr.
+    int[] prefixSum = new int[arr.length];
+
+    prefixSum[0] = arr[0];
+
+    for(int i = 1; i < arr.length; i++){
+        prefixSum[i] = prefixSum[i - 1] + arr[i];
+    }
+
+    return prefixSum
+
+    what this does is 
+    arr = [1,2,3,4]
+    we create a new array,
+    and store first element of arr in prefix array.
+    and in first loop
+        we put sum of first element of prefix array and second element of arr into prefix array position 2.
+    and so on
+        prefix array = [1]
+        prefix array = [1,3]
+        prefix array = [1,3,6]
+        prefix array = [1,3,6,10]
+
+
+scenarios where it is used.
+    Range sum queries
+        where you need to compute the sum of elements between two indices frequently.
+            suppose you have an array:
+            index: 0 1 2 3 4 5
+            Array: 3 5 2 7 1 4
+            prefix_arr: 3 8 10 17 18 22
+            now imagine someone asks:
+                sum from index 1 to 4
+                sum from index 2 to 5
+                sum from index 0 to 3
+            this is called range sum queries.
+            So instead of calculating sum each time 
+            we create an array with sums till all indicies 
+            so that if we wanted to calculate sum from index 2 to 5
+            all we have to do is retrieve value at index 5 of prefix arr and subtract value at index 1 of prefix arr.
+
+            if l and r are given 
+            then prefix[r] - prefix[l - 1]
+
+
+    subarray sum problems
+        a subarray is a contiguous portion of an array.
+            ex:
+            arr = [2,1,3,4]
+            here, the possible subarrays are 
+                [2][1][3][4]
+                [2,1][1,3][3,4]
+                [2,1,3][1,3,4]
+                [2,1,3,4]
+
+                here [2,3] could never be a subarray because it is not contiguous.
+
+        what are they?
+            what is the sum of a given subarray?
+            does a subarray with sum k exist?
+            how many subarrays have sum k?
+            what is the maximum subarray sum?
+                Kadanes algo
+                    given an array [-2,1,-3,4,-1,2,1,-5,4]
+                    find the contiguous subarray with the largest sum.
+                    Bruteforce would be to calculate every possible array.
+                    here the idea is 
+                    while scanning the array from left to right,
+                        at each element ask,
+                        Should i continue with this subarray 
+                        or should i start a new one here?
+
+            what is the minimum subarray sum?
+            what is the longest subarray with sum k?
+
+
+

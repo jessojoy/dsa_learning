@@ -1,0 +1,18 @@
+Maps in java
+    It is a set of key value pairs.
+
+    it is part of the util package.
+
+    syntax:
+        Map<Key Type,Value Type> name = new HashMap<>();
+
+    methods:
+        put(key,value) - to add elements into map.
+            can also be used to overwrite values of key and if not found create a new pair.
+        get(key) - to retrieve elements.
+        containsKey() - check if a key exists in map.
+        containsValue() - check if a value exists in map.
+        getOrDefault() - retrieve value if found, if not put a default value there instead.
+        replace(key,value) - replace value in map.
+        putIfAbsent() - only updates if it is not present in map.
+        remove(key) - removes pair from map.
