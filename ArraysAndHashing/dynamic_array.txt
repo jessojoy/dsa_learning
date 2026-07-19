@@ -1,0 +1,14 @@
+what is it?
+    it is dynamic in nature.
+    whenever we try to insert an element into an array and it is full, then the size grows to fit this new
+    element.
+
+    in java
+        ArrayList<String> arr = new ArrayList<>();
+        is an example of creating a dynamic array.
+        what happens is when it is full, all the elements are copied into a new array with size
+
+        new capacity = old capacity * 3/2 -> old capacity * 1.5
+
+
+    it grows dynamically.
