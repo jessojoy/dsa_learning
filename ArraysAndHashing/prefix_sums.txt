@@ -73,6 +73,8 @@ scenarios where it is used.
                         at each element ask,
                         Should i continue with this subarray 
                         or should i start a new one here?
+                        (kind of like some sliding window problems that I have done.)
+
 
             what is the minimum subarray sum?
             what is the longest subarray with sum k?
